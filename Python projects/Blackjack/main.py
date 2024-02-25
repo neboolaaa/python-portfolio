@@ -25,7 +25,7 @@ def play_game():
     else:
       time.sleep(0.4)
       user_should_deal = input("Would you like to hit or stand? ").lower()
-      if user_should_deal == "hit" or "y" or "yes" or "h":
+      if user_should_deal == "hit":
         print("\033c")
         print(logo)
         user_card.append(deal_card())
@@ -39,7 +39,7 @@ def play_game():
   print(f"Computer's final hand: {dealer_card}, making their final score: {dealer_score}")
   print(compare(user_score, dealer_score))
 
-while input("Do you want to play Blackjack? Y/N ").lower() == "y" or "yes":
+while input("Do you want to play Blackjack? Y/N ").lower() == "y":
   print("\033c")
   time.sleep(0.1)
   play_game()
